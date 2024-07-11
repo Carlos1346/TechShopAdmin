@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Carlos Manuel
+          Funcion Azure
         </a>
       </header>
     </div>
