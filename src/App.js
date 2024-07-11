@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Carlos Manuel González Palacios
         </a>
       </header>
     </div>
