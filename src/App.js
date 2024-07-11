@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Carlos Manuel González Palacios
+          Carlos Manuel
         </a>
       </header>
     </div>
