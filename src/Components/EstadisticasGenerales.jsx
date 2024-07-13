@@ -1,4 +1,4 @@
-// src/EstadisticasGenerales.js
+// src/Dashboard.js
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Card } from 'react-bootstrap';
@@ -16,7 +16,7 @@ import {
 // Registrar las escalas y otros componentes
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-const EstadisticasGenerales = () => {
+const Dashboard = () => {
   // Datos ficticios para las gráficas
   const data = {
     productsVisited: {
@@ -63,7 +63,7 @@ const EstadisticasGenerales = () => {
 
   return (
     <Container style={{ padding: '20px' }}>
-      <h2 className="text-center mb-4">Estadísticas Generales</h2>
+      <h2 className="text-center mb-4">Dashboard de Estadísticas</h2>
       <Row>
         <Col md={6} className="mb-4">
           <Card>
@@ -104,4 +104,4 @@ const EstadisticasGenerales = () => {
   );
 };
 
-export default EstadisticasGenerales;
+export default Dashboard;
