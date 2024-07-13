@@ -1,80 +1,68 @@
-import React from "react";
-import {
-  Navbar,
-  Nav,
-  Form,
-  FormControl,
-  Button,
-  Container,
-  NavDropdown,
-} from "react-bootstrap";
-import { Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Outlet } from "react-router-dom";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import styled from 'styled-components';
 
-const Example = () => {
+const MenuContainer = styled.div`
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const MenuItem = styled.div`
+  padding: 15px;
+  border-bottom: 1px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  :hover {
+    background-color: #444;
+  }
+`;
+
+const MenuLink = styled.a`
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  :hover {
+    color: #ccc;
+  }
+`;
+
+const Icon = styled.i`
+  font-size: 18px;
+  margin-left: 10px;
+  color: #fff;
+`;
+
+function Example() {
   return (
-    <>
-      <Navbar bg="light" variant="light" expand="lg" sticky="top">
-        <Container>
-          <Navbar.Brand href="/">
-            <img
-              src="https://w7.pngwing.com/pngs/257/925/png-transparent-desktop-computers-personal-computer-computer-icons-computer-monitors-computer-rectangle-computer-computer-monitor-accessory-thumbnail.png" // Reemplaza con el URL de tu logotipo
-              alt="Logo"
-              height="30"
-              className="d-inline-block align-top"
-            />{" "}
-            TechShop
-          </Navbar.Brand>
-
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link as={Link} to="/">Inicio</Nav.Link>
-              <Nav.Link as={Link} to="/catalog">Catalogo</Nav.Link>
-              <Nav.Link as={Link} to="/questionary">¡Crea tu mejor opcion!</Nav.Link>
-              <Nav.Link as={Link} to="/login">Iniciar sesion</Nav.Link>
-              <Nav.Link as={Link} to="/register">Registrarse</Nav.Link>
-            </Nav>
-            <Form className="d-flex">
-              <FormControl
-                type="search"
-                placeholder="Buscar"
-                className="me-4"
-                aria-label="Buscar"
-              />
-              <Button variant="outline-success">Buscar</Button>
-            </Form>
-            <Nav>
-              <Nav.Link as={Link} to="/car">Carrito</Nav.Link>
-              <Nav.Link as={Link} to="/ListWish">♥</Nav.Link>
-              <NavDropdown title="Perfil" id="navbarScrollingDropdown">
-                <NavDropdown.Item as={Link} to="/profile">
-                  Ver Perfil
-                </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/status">
-                  Mis compras
-                </NavDropdown.Item>
-
-                <NavDropdown.Item as={Link} to="/car">
-                  Carrito de compras
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action4">
-                  <Button variant="outline-danger">Cerrar Sesión</Button>
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-      <section>
-        <Container>
-          <Outlet />
-        </Container>
-      </section>
-    </>
+    <MenuContainer>
+      <MenuItem>
+        <MenuLink href="#">Productos</MenuLink>
+      </MenuItem>
+      <MenuItem>
+        <MenuLink href="#">Categorías</MenuLink>
+      </MenuItem>
+      <MenuItem>
+        <MenuLink href="#">Usuarios</MenuLink>
+      </MenuItem>
+      <MenuItem>
+        <MenuLink href="#">Marcas</MenuLink>
+      </MenuItem>
+    </MenuContainer>
   );
-};
+
+
+  
+}
 
 export default Example;
