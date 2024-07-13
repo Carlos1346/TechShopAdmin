@@ -1,68 +1,59 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import styled from 'styled-components';
-
-const MenuContainer = styled.div`
-  background-color: #333;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  width: 120px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const MenuItem = styled.div`
-  padding: 15px;
-  border-bottom: 1px solid #444;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-  :hover {
-    background-color: #444;
-  }
-`;
-
-const MenuLink = styled.a`
-  text-decoration: none;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  :hover {
-    color: #ccc;
-  }
-`;
-
-const Icon = styled.i`
-  font-size: 18px;
-  margin-left: 10px;
-  color: #fff;
-`;
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function MenuVertical() {
   return (
-    <MenuContainer>
-      <MenuItem>
-        <MenuLink href="#">Productos</MenuLink>
-      </MenuItem>
-      <MenuItem>
-        <MenuLink href="#">Categorías</MenuLink>
-      </MenuItem>
-      <MenuItem>
-        <MenuLink href="#">Usuarios</MenuLink>
-      </MenuItem>
-      <MenuItem>
-        <MenuLink href="#">Marcas</MenuLink>
-      </MenuItem>
-    </MenuContainer>
+    <div style={{ display: 'flex' }}>
+      <Navbar bg="light" expand="lg" className="flex-column vh-100" style={{ position: 'fixed', width: '170px' }}>
+        <Container fluid>
+          <Nav className="flex-column">
+            
+            <Nav.Link href="#action/3.1" className="menu-link">Productos</Nav.Link>
+            <div className="menu-divider"></div>
+            <Nav.Link href="#action/3.2" className="menu-link">Categorías</Nav.Link>
+            <div className="menu-divider"></div>
+            <Nav.Link href="#action/3.3" className="menu-link">Usuarios</Nav.Link>
+            <div className="menu-divider"></div>
+            <Nav.Link href="#action/3.4" className="menu-link">Marcas</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+      <div style={{ marginLeft: '250px', padding: '20px', width: '100%' }}>
+        {/* Aquí puedes colocar el contenido principal de tu página */}
+        <h1>Contenido Principal</h1>
+        <p>Aquí va el contenido de tu aplicación.</p>
+      </div>
+    </div>
   );
-
-
-  
 }
 
 export default MenuVertical;
+
+// Agrega estilos CSS en el mismo archivo
+const styles = `
+  .menu-link {
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 20px;
+  }
+
+  .menu-link:hover {
+    background-color: #e9ecef;
+    color: #0056b3;
+  }
+
+  .menu-divider {
+    height: 1px;
+    background-color: #dee2e6;
+    margin: 5px 0;
+    width: 150px;
+  }
+`;
+
+// Inserta los estilos en el documento
+const styleSheet = document.createElement("style");
+styleSheet.type = "text/css";
+styleSheet.innerText = styles;
+document.head.appendChild(styleSheet);
