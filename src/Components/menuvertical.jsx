@@ -1,31 +1,59 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function MenuVertical() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+    <div style={{ display: 'flex' }}>
+      <Navbar bg="light" expand="lg" className="flex-column vh-100" style={{ position: 'fixed', width: '170px' }}>
+        <Container fluid>
+          <Nav className="flex-column">
             
-            <NavDropdown title="Menú vertical" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Productos</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.2">Categorías</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.3">Usuarios</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Marcas</NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link href="#action/3.1" className="menu-link">Productos</Nav.Link>
+            <div className="menu-divider"></div>
+            <Nav.Link href="#action/3.2" className="menu-link">Categorías</Nav.Link>
+            <div className="menu-divider"></div>
+            <Nav.Link href="#action/3.3" className="menu-link">Usuarios</Nav.Link>
+            <div className="menu-divider"></div>
+            <Nav.Link href="#action/3.4" className="menu-link">Marcas</Nav.Link>
           </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+        </Container>
+      </Navbar>
+      <div style={{ marginLeft: '250px', padding: '20px', width: '100%' }}>
+        {/* Aquí puedes colocar el contenido principal de tu página */}
+        <h1>Contenido Principal</h1>
+        <p>Aquí va el contenido de tu aplicación.</p>
+      </div>
+    </div>
   );
 }
 
 export default MenuVertical;
+
+// Agrega estilos CSS en el mismo archivo
+const styles = `
+  .menu-link {
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 20px;
+  }
+
+  .menu-link:hover {
+    background-color: #e9ecef;
+    color: #0056b3;
+  }
+
+  .menu-divider {
+    height: 1px;
+    background-color: #dee2e6;
+    margin: 5px 0;
+    width: 150px;
+  }
+`;
+
+// Inserta los estilos en el documento
+const styleSheet = document.createElement("style");
+styleSheet.type = "text/css";
+styleSheet.innerText = styles;
+document.head.appendChild(styleSheet);
