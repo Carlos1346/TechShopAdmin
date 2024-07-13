@@ -2,12 +2,46 @@ import React from 'react';
 import { Table, Form, Button } from 'react-bootstrap';
 import { useTable, usePagination, useSortBy, useGlobalFilter } from 'react-table';
 
-function LogsTable({ columns, data }) {
+function LogsTable() {
+  const columns = React.useMemo(
+    () => [
+      {
+        Header: 'ID',
+        accessor: 'id',
+      },
+      {
+        Header: 'Nombre',
+        accessor: 'name',
+      },
+      {
+        Header: 'Edad',
+        accessor: 'age',
+      },
+    ],
+    []
+  );
+
+  const data = React.useMemo(
+    () => [
+      { id: 1, name: 'Juan', age: 28 },
+      { id: 2, name: 'Ana', age: 22 },
+      { id: 3, name: 'Luis', age: 35 },
+      { id: 4, name: 'Maria', age: 30 },
+      { id: 5, name: 'Carlos', age: 40 },
+      { id: 6, name: 'Laura', age: 25 },
+      { id: 7, name: 'Pedro', age: 45 },
+      { id: 8, name: 'Sofia', age: 20 },
+      { id: 9, name: 'Miguel', age: 38 },
+      { id: 10, name: 'Julia', age: 27 },
+      // Agrega más datos según necesites
+    ],
+    []
+  );
+
   const {
     getTableProps,
     getTableBodyProps,
     headerGroups,
-    rows,
     prepareRow,
     page,
     nextPage,
