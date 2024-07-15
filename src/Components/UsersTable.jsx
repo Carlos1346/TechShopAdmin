@@ -3,13 +3,27 @@ import React, { useState } from 'react';
 import { Table, Button, InputGroup, FormControl } from 'react-bootstrap';
 import { useTable, useSortBy, usePagination, useGlobalFilter } from 'react-table';
 import { FaSort, FaSortUp, FaSortDown } from 'react-icons/fa';
+import { Link } from "react-router-dom";
 
 // Datos ficticios de ejemplo
 const data = [
-  { id: 1, name: 'Usuario 1', email: 'usuario1@example.com' },
-  { id: 2, name: 'Usuario 2', email: 'usuario2@example.com' },
-  // Agrega más datos según sea necesario
-];
+  { "id": 1, "name": "Alejandro García", "email": "alejandro.garcia@example.com" },
+  { "id": 2, "name": "María Hernández", "email": "maria.hernandez@example.com" },
+  { "id": 3, "name": "Juan Pérez", "email": "juan.perez@example.com" },
+  { "id": 4, "name": "Ana López", "email": "ana.lopez@example.com" },
+  { "id": 5, "name": "Carlos Sánchez", "email": "carlos.sanchez@example.com" },
+  { "id": 6, "name": "Luis Martínez", "email": "luis.martinez@example.com" },
+  { "id": 7, "name": "Guadalupe Rodríguez", "email": "guadalupe.rodriguez@example.com" },
+  { "id": 8, "name": "Fernando Fernández", "email": "fernando.fernandez@example.com" },
+  { "id": 9, "name": "Rosa Gómez", "email": "rosa.gomez@example.com" },
+  { "id": 10, "name": "Jorge Ramírez", "email": "jorge.ramirez@example.com" },
+  { "id": 11, "name": "Mónica Torres", "email": "monica.torres@example.com" },
+  { "id": 12, "name": "Sergio Jiménez", "email": "sergio.jimenez@example.com" },
+  { "id": 13, "name": "Patricia Díaz", "email": "patricia.diaz@example.com" },
+  { "id": 14, "name": "Ricardo Cruz", "email": "ricardo.cruz@example.com" },
+  { "id": 15, "name": "Laura Morales", "email": "laura.morales@example.com" }
+]
+
 
 // Definición de columnas
 const columns = [
@@ -18,7 +32,8 @@ const columns = [
   { Header: 'Email', accessor: 'email' },
   { Header: 'Acciones', accessor: 'actions', Cell: ({ row }) => (
     <>
-      <Button variant="warning" size="sm" className="me-2">Editar</Button>
+      <Button  as={Link}
+        to="/Dashboard/Altas/FormUsers" variant="warning" size="sm" className="me-2">Editar</Button>
       <Button variant="danger" size="sm">Eliminar</Button>
     </>
   )}

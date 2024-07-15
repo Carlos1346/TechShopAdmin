@@ -22,6 +22,7 @@ import BrandsTable from "../Components/BrandsTable.jsx";
 import OrderTable from "../Components/OrderTable.jsx";
 import ReviewList from "../Components/ReviewList.jsx";
 import LoginForm from "../Components/LoginForm.jsx";
+import ProductForm from "../Components/ProductForm.jsx";
 
 function Main() {
   return (
@@ -51,6 +52,7 @@ function Main() {
               <Route path="Marcas" element={<BrandsTable/>} />
               <Route path="Ordenes" element={<OrderTable/>} />
               <Route path="Reseñas" element={<ReviewList/>} />
+              <Route path="ProductForm" element={<ProductForm/>} />
               
               
             </Route>

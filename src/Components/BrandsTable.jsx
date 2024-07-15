@@ -6,10 +6,18 @@ import { FaSort, FaSortUp, FaSortDown } from 'react-icons/fa';
 
 // Datos ficticios de ejemplo
 const data = [
-  { id: 1, name: 'Marca 1', country: 'País 1' },
-  { id: 2, name: 'Marca 2', country: 'País 2' },
-  // Agrega más datos según sea necesario
-];
+  { "id": 1, "name": "Intel", "country": "Estados Unidos" },
+  { "id": 2, "name": "AMD", "country": "Estados Unidos" },
+  { "id": 3, "name": "NVIDIA", "country": "Estados Unidos" },
+  { "id": 4, "name": "ASUS", "country": "Taiwán" },
+  { "id": 5, "name": "MSI", "country": "Taiwán" },
+  { "id": 6, "name": "Corsair", "country": "Estados Unidos" },
+  { "id": 7, "name": "Samsung", "country": "Corea del Sur" },
+  { "id": 8, "name": "Western Digital", "country": "Estados Unidos" },
+  { "id": 9, "name": "Seagate", "country": "Estados Unidos" },
+  { "id": 10, "name": "Logitech", "country": "Suiza" }
+]
+;
 
 // Definición de columnas
 const columns = [
@@ -92,6 +100,7 @@ const BrandsTable = () => {
           Siguiente
         </Button>
       </div>
+      
     </div>
   );
 };
