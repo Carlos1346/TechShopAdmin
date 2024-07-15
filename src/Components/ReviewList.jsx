@@ -5,27 +5,27 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const initialReviews = [
   { 
     id: 1, 
-    product: 'Producto 1', 
+    product: 'Xtreme Pc Gaming Asus Geforce Rtx 4060 Ti Intel Core I7 12700f 32gb Ssd 1tb Wifi', 
     date: '2023-07-01', 
     status: 'Pendiente', 
     review: 'Muy buen producto',
-    image: 'https://www.xtremepc.com.mx/cdn/shop/files/51136ca4-14b8-4252-9fee-91a606bdaf65_800x.png?v=1717787954', // URL de ejemplo de la imagen
+    image: 'https://http2.mlstatic.com/D_NQ_NP_818665-MLU76495838883_052024-O.webp', // URL de ejemplo de la imagen
   },
   { 
     id: 2, 
-    product: 'Producto 2', 
+    product: 'Tarjeta Video Nvidia Gigabyte Rtx 3050 Windforce Oc V2 8gb', 
     date: '2023-06-15', 
     status: 'Aprobada', 
     review: 'Excelente calidad',
-    image: 'https://www.xtremepc.com.mx/cdn/shop/files/51136ca4-14b8-4252-9fee-91a606bdaf65_800x.png?v=1717787954', // URL de ejemplo de la imagen
+    image: 'https://http2.mlstatic.com/D_NQ_NP_963077-MLM74440169646_022024-O.webp', // URL de ejemplo de la imagen
   },
   { 
     id: 3, 
-    product: 'Producto 3', 
+    product: 'Pc Gamer Cpu Amd Ryzen 5600g Ram 16gb Ddr4 240gb Ssd Wi-fi', 
     date: '2023-07-05', 
     status: 'Enviada', 
     review: 'Llegó rápido y en buen estado',
-    image: 'https://www.xtremepc.com.mx/cdn/shop/files/51136ca4-14b8-4252-9fee-91a606bdaf65_800x.png?v=1717787954', // URL de ejemplo de la imagen
+    image: 'https://http2.mlstatic.com/D_NQ_NP_639692-MLA53739072631_022023-O.webp', // URL de ejemplo de la imagen
   },
 ];
 

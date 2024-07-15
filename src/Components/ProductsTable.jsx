@@ -8,13 +8,22 @@ import {
   useGlobalFilter,
 } from "react-table";
 import { FaSort, FaSortUp, FaSortDown } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 // Datos ficticios de ejemplo
 const data = [
-  { id: 1, name: "Producto 1", category: "Categoría 1", price: 100 },
-  { id: 2, name: "Producto 2", category: "Categoría 2", price: 150 },
-  // Agrega más datos según sea necesario
-];
+  { "id": 1, "name": "Computadora Armada Gamer", "category": "Computadora Armada", "price": 1500 },
+  { "id": 2, "name": "Procesador Intel Core i9", "category": "Procesador", "price": 500 },
+  { "id": 3, "name": "Tarjeta Madre ASUS ROG", "category": "Tarjeta Madre", "price": 300 },
+  { "id": 4, "name": "Memoria RAM Corsair 16GB", "category": "Memoria RAM", "price": 150 },
+  { "id": 5, "name": "Disco Duro SSD 1TB", "category": "Disco Duro", "price": 200 },
+  { "id": 6, "name": "Tarjeta Gráfica NVIDIA RTX 3080", "category": "Tarjeta Gráfica", "price": 800 },
+  { "id": 7, "name": "Fuente de Poder EVGA 750W", "category": "Fuente de Poder", "price": 100 },
+  { "id": 8, "name": "Gabinete NZXT H510", "category": "Gabinete", "price": 120 },
+  { "id": 9, "name": "Teclado Mecánico HyperX", "category": "Periférico", "price": 90 },
+  { "id": 10, "name": "Mouse Gamer Logitech G502", "category": "Periférico", "price": 70 }
+]
+
 
 // Definición de columnas
 const columns = [
@@ -27,7 +36,13 @@ const columns = [
     accessor: "actions",
     Cell: ({ row }) => (
       <>
-        <Button variant="warning" size="sm" className="me-2">
+        <Button
+          as={Link}
+          to="/Dashboard/Altas/ProductForm"
+          variant="warning"
+          size="sm"
+          className="me-2"
+        >
           Editar
         </Button>
         <Button variant="danger" size="sm">
@@ -121,6 +136,15 @@ const ProductsTable = () => {
           Siguiente
         </Button>
       </div>
+      <p></p>
+      <Button
+        as={Link}
+        to="/Dashboard/Altas/ProductForm"
+        variant="primary"
+        type="submit"
+      >
+        Agregar Producto
+      </Button>
     </div>
   );
 };

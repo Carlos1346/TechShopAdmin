@@ -24,7 +24,6 @@ const MenuHorizontal = () => {
               <Nav.Link as={Link} to="/Dashboard/Estadisticas/Generales">Generales</Nav.Link>
               <Nav.Link as={Link} to="/Dashboard/Estadisticas/Ventas">Ventas</Nav.Link>
               <Nav.Link as={Link} to="/Dashboard/Estadisticas/Productos">Productos</Nav.Link>
-              <Nav.Link as={Link} to="/Dashboard/Estadisticas/Categorias">Categorías</Nav.Link>
               <Nav.Link as={Link} to="/Dashboard/Estadisticas/Usuarios">Usuarios</Nav.Link>
               <Nav.Link as={Link} to="/Dashboard/Estadisticas/Marcas">Marcas y proveedores</Nav.Link>
             </Nav>
