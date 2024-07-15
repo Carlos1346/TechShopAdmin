@@ -6,6 +6,7 @@ import {
   FormControl,
   Button,
   NavDropdown,
+  Container
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -15,10 +16,8 @@ const MenuPrincipal = () => {
   return (
     <>
       <Navbar bg="light" variant="light" expand="lg" sticky="top">
-        <div>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Navbar.Brand as={Link} to="/Dashboard/Inicio">
+      <Container fluid>
+      <Navbar.Brand as={Link} to="/Dashboard/Inicio">
               <img
                 src="https://w7.pngwing.com/pngs/257/925/png-transparent-desktop-computers-personal-computer-computer-icons-computer-monitors-computer-rectangle-computer-computer-monitor-accessory-thumbnail.png" // Reemplaza con el URL de tu logotipo
                 alt="Logo"
@@ -28,6 +27,9 @@ const MenuPrincipal = () => {
               />{" "}
               TechShop
             </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            
             <Nav className="me-auto">
               <Nav.Link as={Link} to="/Dashboard/Estadisticas/Generales">
                 Estadisticas
@@ -58,7 +60,7 @@ const MenuPrincipal = () => {
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
-        </div>
+          </Container>
       </Navbar>
       <section>
         <div style={{ width: "100%" }}>

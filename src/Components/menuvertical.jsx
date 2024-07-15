@@ -1,64 +1,43 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import React from 'react';
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Link, Outlet } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Outlet , Link} from "react-router-dom";
 
-function MenuVertical() {
+const MenuHorizontal = () => {
   return (
-    <div style={{ display: 'flex' }}>
-      <Navbar bg="light" expand="lg" className="flex-column vh-100" style={{ position: 'fixed', width: '160px' }}>
+    <>
+      <Navbar bg="light" variant="light" expand="lg" sticky="top">
         <Container fluid>
-          <Nav className="flex-column">
-
-            <Nav.Link as={Link} to="/Dashboard/Estadisticas/Generales" className="menu-link">Generales</Nav.Link>
-            <div className="menu-divider"></div>            
-            <Nav.Link as={Link} to="/Dashboard/Estadisticas/Ventas" className="menu-link">Ventas</Nav.Link>
-            <div className="menu-divider"></div>
-            <Nav.Link as={Link} to="/Dashboard/Estadisticas/Productos" className="menu-link">Productos</Nav.Link>
-            <div className="menu-divider"></div>
-            <Nav.Link as={Link} to="/Dashboard/Estadisticas/Productos"className="menu-link">Categorías</Nav.Link>
-            <div className="menu-divider"></div>
-            <Nav.Link as={Link} to="/Dashboard/Estadisticas/Usuarios"className="menu-link">Usuarios</Nav.Link>
-            <div className="menu-divider"></div>
-            <Nav.Link as={Link} to="/Dashboard/Estadisticas/Marcas" className="menu-link">Marcas y proveedores</Nav.Link>
-          </Nav>
+          <Navbar.Brand as={Link} to="/Dashboard/Inicio">
+            <img
+              src="https://e7.pngegg.com/pngimages/59/134/png-clipart-chart-computer-icons-statistics-report-elevator-repair-miscellaneous-angle.png" // Reemplaza con el URL de tu logotipo
+              alt="Logo"
+              height="30"
+              className="d-inline-block align-top"
+              style={{ marginRight: '10px' }}
+            />
+            Estadisticas
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link as={Link} to="/Dashboard/Estadisticas/Generales">Generales</Nav.Link>
+              <Nav.Link as={Link} to="/Dashboard/Estadisticas/Ventas">Ventas</Nav.Link>
+              <Nav.Link as={Link} to="/Dashboard/Estadisticas/Productos">Productos</Nav.Link>
+              <Nav.Link as={Link} to="/Dashboard/Estadisticas/Categorias">Categorías</Nav.Link>
+              <Nav.Link as={Link} to="/Dashboard/Estadisticas/Usuarios">Usuarios</Nav.Link>
+              <Nav.Link as={Link} to="/Dashboard/Estadisticas/Marcas">Marcas y proveedores</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
-      <div style={{ marginLeft: '160px', width: '100%' }}>
-        
-        <Outlet />
-      </div>
-    </div>
+      <section>
+        <div style={{ width: '100%', padding: '20px' }}>
+          <Outlet />
+        </div>
+      </section>
+    </>
   );
 }
 
-export default MenuVertical;
-
-// Agrega estilos CSS en el mismo archivo
-const styles = `
-  .menu-link {
-    padding: 10px 10px;
-    transition: background-color 0.3s, color 0.3s;
-    font-size: 16px;
-  }
-
-  .menu-link:hover {
-    background-color: #e9ecef;
-    color: #0056b3;
-    font-size: 17px;
-  }
-
-  .menu-divider {
-    height: 1px;
-    background-color: #dee2e6;
-    margin: 5px 0;
-    width: 150px;
-  }
-`;
-
-// Inserta los estilos en el documento
-const styleSheet = document.createElement("style");
-styleSheet.type = "text/css";
-styleSheet.innerText = styles;
-document.head.appendChild(styleSheet);
+export default MenuHorizontal;

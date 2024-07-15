@@ -6,72 +6,53 @@ import { Outlet, Link } from "react-router-dom";
 
 function NavbarQueries() {
   return (
-    <div style={{ display: "flex" }}>
-      <Navbar
-        bg="light"
-        expand="lg"
-        className="flex-column vh-100"
-        style={{ position: "fixed", width: "160px" }}
-      >
+    <>
+      <Navbar bg="light" expand="lg" sticky="top">
         <Container fluid>
-          <Nav className="flex-column">
-            <p style={{ margin: "5px" }}>Agregar, modificar y eliminar:</p>
-
-            <Nav.Link
-              as={Link}
-              to="/Dashboard/Altas/Productos"
-              className="menu-link"
-            >
-              Productos
-            </Nav.Link>
-            <div className="menu-divider"></div>
-            <Nav.Link
-              as={Link}
-              to="/Dashboard/Altas/Categorias"
-              className="menu-link"
-            >
-              Categorías
-            </Nav.Link>
-            <div className="menu-divider"></div>
-            <Nav.Link
-              as={Link}
-              to="/Dashboard/Altas/Usuarios"
-              className="menu-link"
-            >
-              Usuarios
-            </Nav.Link>
-            <div className="menu-divider"></div>
-            <Nav.Link
-              as={Link}
-              to="/Dashboard/Altas/Marcas"
-              className="menu-link"
-            >
-              Marcas y provedores
-            </Nav.Link>
-            <div className="menu-divider"></div>
-            <Nav.Link
-              as={Link}
-              to="/Dashboard/Altas/Ordenes"
-              className="menu-link"
-            >
-              Ultimas ordenes
-            </Nav.Link>
-            <div className="menu-divider"></div>
-            <Nav.Link
-              as={Link}
-              to="/Dashboard/Altas/Reseñas"
-              className="menu-link"
-            >
-              Reseñas
-            </Nav.Link>
-            
-          </Nav>
+        <Navbar.Brand as={Link} to="/Dashboard/Inicio">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/5581/5581976.png" // Reemplaza con el URL de tu logotipo
+              alt="Logo"
+              height="30"
+              className="d-inline-block align-top"
+              style={{ marginRight: '10px' }}
+            />
+            Administrar
+          </Navbar.Brand>
+          
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              
+              <Nav.Link as={Link} to="/Dashboard/Altas/Productos" className="menu-link">
+                Productos
+              </Nav.Link>
+              <Nav.Link as={Link} to="/Dashboard/Altas/Categorias" className="menu-link">
+                Categorías
+              </Nav.Link>
+              <Nav.Link as={Link} to="/Dashboard/Altas/Usuarios" className="menu-link">
+                Usuarios
+              </Nav.Link>
+              <Nav.Link as={Link} to="/Dashboard/Altas/Marcas" className="menu-link">
+                Marcas y provedores
+              </Nav.Link>
+              <Nav.Link as={Link} to="/Dashboard/Altas/Ordenes" className="menu-link">
+                Ultimas ordenes
+              </Nav.Link>
+              <Nav.Link as={Link} to="/Dashboard/Altas/Reseñas" className="menu-link">
+                Reseñas
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
-      <div style={{ marginLeft: "160px", width: "100%" }}>
-        <Outlet />
-      </div>
-    </div>
+      <section>
+        <div style={{ width: "100%", padding: "20px" }}>
+          <Outlet />
+        </div>
+      </section>
+    </>
   );
 }
 
