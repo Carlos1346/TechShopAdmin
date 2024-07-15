@@ -13,41 +13,42 @@ const OrderTable = () => {
   const data = React.useMemo(
     () => [
       {
-        orderId: 1,
-        customer: "John Doe",
-        product: "Laptop XYZ",
-        amount: 1200,
-        status: "Pendiente",
+        "orderId": 1,
+        "customer": "Ana García",
+        "product": "Computadora Armada Gamer",
+        "amount": 1500,
+        "status": "Pendiente"
       },
       {
-        orderId: 2,
-        customer: "Jane Smith",
-        product: "Desktop ABC",
-        amount: 800,
-        status: "Aprobada",
+        "orderId": 2,
+        "customer": "Carlos López",
+        "product": "Procesador Intel Core i9",
+        "amount": 500,
+        "status": "Aprobada"
       },
       {
-        orderId: 3,
-        customer: "Mike Johnson",
-        product: 'Monitor 24"',
-        amount: 300,
-        status: "Enviada",
+        "orderId": 3,
+        "customer": "María Rodríguez",
+        "product": "Tarjeta Gráfica NVIDIA RTX 3080",
+        "amount": 800,
+        "status": "Enviada"
       },
       {
-        orderId: 4,
-        customer: "Emily Brown",
-        product: "Keyboard",
-        amount: 50,
-        status: "Entregada",
+        "orderId": 4,
+        "customer": "Juan Martínez",
+        "product": "Memoria RAM Corsair 16GB",
+        "amount": 150,
+        "status": "Entregada"
       },
       {
-        orderId: 5,
-        customer: "Chris Lee",
-        product: "Mouse",
-        amount: 30,
-        status: "Devuelta",
-      },
-    ],
+        "orderId": 5,
+        "customer": "Laura Pérez",
+        "product": "Disco Duro SSD 1TB",
+        "amount": 200,
+        "status": "Devuelta"
+      }
+    ]
+    ,
     []
   );
 

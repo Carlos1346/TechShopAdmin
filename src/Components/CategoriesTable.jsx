@@ -6,10 +6,17 @@ import { FaSort, FaSortUp, FaSortDown } from 'react-icons/fa';
 
 // Datos ficticios de ejemplo
 const data = [
-  { id: 1, name: 'Categoría 1', description: 'Descripción 1' },
-  { id: 2, name: 'Categoría 2', description: 'Descripción 2' },
-  // Agrega más datos según sea necesario
-];
+  { "id": 1, "name": "Computadora Armada", "description": "Computadoras ensambladas listas para usar" },
+  { "id": 2, "name": "Procesador", "description": "Unidades de procesamiento central (CPU)" },
+  { "id": 3, "name": "Tarjeta Madre", "description": "Placas base para diferentes tipos de sistemas" },
+  { "id": 4, "name": "Memoria RAM", "description": "Módulos de memoria de acceso aleatorio" },
+  { "id": 5, "name": "Disco Duro", "description": "Discos duros y unidades de estado sólido (SSD)" },
+  { "id": 6, "name": "Tarjeta Gráfica", "description": "Unidades de procesamiento gráfico (GPU)" },
+  { "id": 7, "name": "Fuente de Poder", "description": "Fuentes de alimentación para computadoras" },
+  { "id": 8, "name": "Gabinete", "description": "Cajas y gabinetes para ensamblar computadoras" },
+  { "id": 9, "name": "Periférico", "description": "Teclados, ratones y otros dispositivos externos" }
+]
+
 
 // Definición de columnas
 const columns = [
